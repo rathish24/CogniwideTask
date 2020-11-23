@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="110" id="KGk-i7-Jjw" customClass="PostCell" customModule="CogniwideTask" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="318" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="318" height="110"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3I-SM-ftA">
+                        <rect key="frame" x="10" y="10" width="298" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Nre-of-b1P"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdL-aC-mwQ">
+                        <rect key="frame" x="10" y="41" width="298" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aj1-Uk-iMy">
+                        <rect key="frame" x="288" y="71.5" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="9xT-Cg-Szl"/>
+                            <constraint firstAttribute="height" constant="20" id="HMT-MD-O6G"/>
+                        </constraints>
+                        <state key="normal" image="book" catalog="system"/>
+                        <connections>
+                            <action selector="saveBtnAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9ac-Js-pfh"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gdL-aC-mwQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="1zi-Jm-psh"/>
+                    <constraint firstItem="gdL-aC-mwQ" firstAttribute="top" secondItem="e3I-SM-ftA" secondAttribute="bottom" constant="10" id="3XV-HC-aNV"/>
+                    <constraint firstAttribute="bottom" secondItem="Aj1-Uk-iMy" secondAttribute="bottom" constant="18.5" id="aIc-WT-yug"/>
+                    <constraint firstAttribute="trailing" secondItem="e3I-SM-ftA" secondAttribute="trailing" constant="10" id="beJ-nC-mSb"/>
+                    <constraint firstAttribute="trailing" secondItem="gdL-aC-mwQ" secondAttribute="trailing" constant="10" id="hap-wP-gwy"/>
+                    <constraint firstItem="Aj1-Uk-iMy" firstAttribute="top" secondItem="gdL-aC-mwQ" secondAttribute="bottom" constant="10" id="pQu-LO-h89"/>
+                    <constraint firstItem="e3I-SM-ftA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="rfh-Cl-ebO"/>
+                    <constraint firstAttribute="trailing" secondItem="Aj1-Uk-iMy" secondAttribute="trailing" constant="10" id="sO5-hr-8oM"/>
+                    <constraint firstItem="e3I-SM-ftA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="wHq-Md-B8X"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descLabel" destination="gdL-aC-mwQ" id="Jnj-J4-cc9"/>
+                <outlet property="saveBtn" destination="Aj1-Uk-iMy" id="3k9-Pk-a3c"/>
+                <outlet property="titleLabel" destination="e3I-SM-ftA" id="E9p-TS-k2k"/>
+            </connections>
+            <point key="canvasLocation" x="11.594202898550726" y="58.928571428571423"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="book" catalog="system" width="128" height="102"/>
+    </resources>
+</document>

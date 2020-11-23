@@ -1,0 +1,826 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		30B0A08A256A5CF700A79085 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A089256A5CF700A79085 /* AppDelegate.swift */; };
+		30B0A08C256A5CF700A79085 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A08B256A5CF700A79085 /* SceneDelegate.swift */; };
+		30B0A091256A5CF700A79085 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30B0A08F256A5CF700A79085 /* Main.storyboard */; };
+		30B0A093256A5CFA00A79085 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30B0A092256A5CFA00A79085 /* Assets.xcassets */; };
+		30B0A096256A5CFA00A79085 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30B0A094256A5CFA00A79085 /* LaunchScreen.storyboard */; };
+		30B0A0A1256A5CFB00A79085 /* CogniwideTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A0A0256A5CFB00A79085 /* CogniwideTaskTests.swift */; };
+		30B0A0AC256A5CFB00A79085 /* CogniwideTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A0AB256A5CFB00A79085 /* CogniwideTaskUITests.swift */; };
+		30B0A0BD256A5DCF00A79085 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A0BC256A5DCF00A79085 /* HomeViewController.swift */; };
+		30B0A0C2256A5E0600A79085 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A0C1256A5E0600A79085 /* FavouriteViewController.swift */; };
+		30B0A0E0256A6B5600A79085 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A0DF256A6B5600A79085 /* APIClient.swift */; };
+		30B0A0E5256A6B8800A79085 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A0E4256A6B8700A79085 /* Post.swift */; };
+		30B0A0EA256A6C4C00A79085 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A0E9256A6C4C00A79085 /* APIRouter.swift */; };
+		30B0A0EF256A6C7700A79085 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A0EE256A6C7700A79085 /* Constants.swift */; };
+		30B0A0F4256A6D4000A79085 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A0F3256A6D4000A79085 /* ApiError.swift */; };
+		30B0A103256A82A000A79085 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A102256A82A000A79085 /* PostViewModel.swift */; };
+		30B0A10A256A865200A79085 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A108256A865200A79085 /* PostCell.swift */; };
+		30B0A10B256A865200A79085 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30B0A109256A865200A79085 /* PostCell.xib */; };
+		30B0A110256AEBB200A79085 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A10F256AEBB100A79085 /* LoginViewController.swift */; };
+		30B0A115256AEC3300A79085 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A114256AEC3300A79085 /* MainTabViewController.swift */; };
+		30B0A11B256AFF6500A79085 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A11A256AFF6400A79085 /* CoreDataStack.swift */; };
+		519EE0463E159CB329046EAA /* Pods_CogniwideTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F15EF543465198C38AAC1FC1 /* Pods_CogniwideTaskTests.framework */; };
+		93E6B3FCC089F7276962C836 /* Pods_CogniwideTask_CogniwideTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC986D0C59D923C07873D9AF /* Pods_CogniwideTask_CogniwideTaskUITests.framework */; };
+		CA0DF622215B2B10C047F264 /* Pods_CogniwideTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF258AABEAC815FF894ACDD /* Pods_CogniwideTask.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		30B0A09D256A5CFB00A79085 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30B0A07E256A5CF700A79085 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30B0A085256A5CF700A79085;
+			remoteInfo = CogniwideTask;
+		};
+		30B0A0A8256A5CFB00A79085 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30B0A07E256A5CF700A79085 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30B0A085256A5CF700A79085;
+			remoteInfo = CogniwideTask;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03C4160B5065EFD99228A9DD /* Pods-CogniwideTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CogniwideTaskTests.release.xcconfig"; path = "Target Support Files/Pods-CogniwideTaskTests/Pods-CogniwideTaskTests.release.xcconfig"; sourceTree = "<group>"; };
+		30B0A086256A5CF700A79085 /* CogniwideTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CogniwideTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		30B0A089256A5CF700A79085 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		30B0A08B256A5CF700A79085 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		30B0A090256A5CF700A79085 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		30B0A092256A5CFA00A79085 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		30B0A095256A5CFA00A79085 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		30B0A097256A5CFA00A79085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30B0A09C256A5CFB00A79085 /* CogniwideTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CogniwideTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30B0A0A0256A5CFB00A79085 /* CogniwideTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CogniwideTaskTests.swift; sourceTree = "<group>"; };
+		30B0A0A2256A5CFB00A79085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30B0A0A7256A5CFB00A79085 /* CogniwideTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CogniwideTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30B0A0AB256A5CFB00A79085 /* CogniwideTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CogniwideTaskUITests.swift; sourceTree = "<group>"; };
+		30B0A0AD256A5CFB00A79085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30B0A0BC256A5DCF00A79085 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		30B0A0C1256A5E0600A79085 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
+		30B0A0DF256A6B5600A79085 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		30B0A0E4256A6B8700A79085 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		30B0A0E9256A6C4C00A79085 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		30B0A0EE256A6C7700A79085 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		30B0A0F3256A6D4000A79085 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		30B0A102256A82A000A79085 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		30B0A108256A865200A79085 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		30B0A109256A865200A79085 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		30B0A10F256AEBB100A79085 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		30B0A114256AEC3300A79085 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		30B0A11A256AFF6400A79085 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		3825064F4F2A5E3BA3879F94 /* Pods-CogniwideTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CogniwideTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-CogniwideTaskTests/Pods-CogniwideTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
+		46551B4FFAD0687DAB80D715 /* Pods-CogniwideTask-CogniwideTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CogniwideTask-CogniwideTaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-CogniwideTask-CogniwideTaskUITests/Pods-CogniwideTask-CogniwideTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		52A2607977AA968AB8D491F7 /* Pods-CogniwideTask-CogniwideTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CogniwideTask-CogniwideTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-CogniwideTask-CogniwideTaskUITests/Pods-CogniwideTask-CogniwideTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7AF258AABEAC815FF894ACDD /* Pods_CogniwideTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CogniwideTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DA080B8A6A872DF461D4C39 /* Pods-CogniwideTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CogniwideTask.debug.xcconfig"; path = "Target Support Files/Pods-CogniwideTask/Pods-CogniwideTask.debug.xcconfig"; sourceTree = "<group>"; };
+		93F88C7C4F8A86DE1B9E2D27 /* Pods-CogniwideTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CogniwideTask.release.xcconfig"; path = "Target Support Files/Pods-CogniwideTask/Pods-CogniwideTask.release.xcconfig"; sourceTree = "<group>"; };
+		DC986D0C59D923C07873D9AF /* Pods_CogniwideTask_CogniwideTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CogniwideTask_CogniwideTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F15EF543465198C38AAC1FC1 /* Pods_CogniwideTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CogniwideTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		30B0A083256A5CF700A79085 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0DF622215B2B10C047F264 /* Pods_CogniwideTask.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30B0A099256A5CFB00A79085 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				519EE0463E159CB329046EAA /* Pods_CogniwideTaskTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30B0A0A4256A5CFB00A79085 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93E6B3FCC089F7276962C836 /* Pods_CogniwideTask_CogniwideTaskUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C2C6849D3F6231A7D3BE99F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AF258AABEAC815FF894ACDD /* Pods_CogniwideTask.framework */,
+				DC986D0C59D923C07873D9AF /* Pods_CogniwideTask_CogniwideTaskUITests.framework */,
+				F15EF543465198C38AAC1FC1 /* Pods_CogniwideTaskTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		30B0A07D256A5CF700A79085 = {
+			isa = PBXGroup;
+			children = (
+				30B0A088256A5CF700A79085 /* CogniwideTask */,
+				30B0A09F256A5CFB00A79085 /* CogniwideTaskTests */,
+				30B0A0AA256A5CFB00A79085 /* CogniwideTaskUITests */,
+				30B0A087256A5CF700A79085 /* Products */,
+				640BEC9FE9B5C20597162C36 /* Pods */,
+				1C2C6849D3F6231A7D3BE99F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		30B0A087256A5CF700A79085 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30B0A086256A5CF700A79085 /* CogniwideTask.app */,
+				30B0A09C256A5CFB00A79085 /* CogniwideTaskTests.xctest */,
+				30B0A0A7256A5CFB00A79085 /* CogniwideTaskUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		30B0A088256A5CF700A79085 /* CogniwideTask */ = {
+			isa = PBXGroup;
+			children = (
+				30B0A119256AFF4C00A79085 /* CoreData */,
+				30B0A107256A862B00A79085 /* Views */,
+				30B0A0D6256A60D300A79085 /* Models */,
+				30B0A0C6256A5F7D00A79085 /* NetworkManager */,
+				30B0A089256A5CF700A79085 /* AppDelegate.swift */,
+				30B0A08B256A5CF700A79085 /* SceneDelegate.swift */,
+				30B0A08F256A5CF700A79085 /* Main.storyboard */,
+				30B0A092256A5CFA00A79085 /* Assets.xcassets */,
+				30B0A094256A5CFA00A79085 /* LaunchScreen.storyboard */,
+				30B0A097256A5CFA00A79085 /* Info.plist */,
+				30B0A0BC256A5DCF00A79085 /* HomeViewController.swift */,
+				30B0A0C1256A5E0600A79085 /* FavouriteViewController.swift */,
+				30B0A10F256AEBB100A79085 /* LoginViewController.swift */,
+				30B0A114256AEC3300A79085 /* MainTabViewController.swift */,
+			);
+			path = CogniwideTask;
+			sourceTree = "<group>";
+		};
+		30B0A09F256A5CFB00A79085 /* CogniwideTaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				30B0A0A0256A5CFB00A79085 /* CogniwideTaskTests.swift */,
+				30B0A0A2256A5CFB00A79085 /* Info.plist */,
+			);
+			path = CogniwideTaskTests;
+			sourceTree = "<group>";
+		};
+		30B0A0AA256A5CFB00A79085 /* CogniwideTaskUITests */ = {
+			isa = PBXGroup;
+			children = (
+				30B0A0AB256A5CFB00A79085 /* CogniwideTaskUITests.swift */,
+				30B0A0AD256A5CFB00A79085 /* Info.plist */,
+			);
+			path = CogniwideTaskUITests;
+			sourceTree = "<group>";
+		};
+		30B0A0C6256A5F7D00A79085 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				30B0A0DF256A6B5600A79085 /* APIClient.swift */,
+				30B0A0E9256A6C4C00A79085 /* APIRouter.swift */,
+				30B0A0EE256A6C7700A79085 /* Constants.swift */,
+				30B0A0F3256A6D4000A79085 /* ApiError.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		30B0A0D6256A60D300A79085 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				30B0A0E4256A6B8700A79085 /* Post.swift */,
+				30B0A102256A82A000A79085 /* PostViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		30B0A107256A862B00A79085 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				30B0A108256A865200A79085 /* PostCell.swift */,
+				30B0A109256A865200A79085 /* PostCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		30B0A119256AFF4C00A79085 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				30B0A11A256AFF6400A79085 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		640BEC9FE9B5C20597162C36 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7DA080B8A6A872DF461D4C39 /* Pods-CogniwideTask.debug.xcconfig */,
+				93F88C7C4F8A86DE1B9E2D27 /* Pods-CogniwideTask.release.xcconfig */,
+				46551B4FFAD0687DAB80D715 /* Pods-CogniwideTask-CogniwideTaskUITests.debug.xcconfig */,
+				52A2607977AA968AB8D491F7 /* Pods-CogniwideTask-CogniwideTaskUITests.release.xcconfig */,
+				3825064F4F2A5E3BA3879F94 /* Pods-CogniwideTaskTests.debug.xcconfig */,
+				03C4160B5065EFD99228A9DD /* Pods-CogniwideTaskTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		30B0A085256A5CF700A79085 /* CogniwideTask */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30B0A0B0256A5CFB00A79085 /* Build configuration list for PBXNativeTarget "CogniwideTask" */;
+			buildPhases = (
+				7B327E0F518921F5D0C122A5 /* [CP] Check Pods Manifest.lock */,
+				30B0A082256A5CF700A79085 /* Sources */,
+				30B0A083256A5CF700A79085 /* Frameworks */,
+				30B0A084256A5CF700A79085 /* Resources */,
+				26E928A5C1E56B711A6FC392 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CogniwideTask;
+			productName = CogniwideTask;
+			productReference = 30B0A086256A5CF700A79085 /* CogniwideTask.app */;
+			productType = "com.apple.product-type.application";
+		};
+		30B0A09B256A5CFB00A79085 /* CogniwideTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30B0A0B3256A5CFB00A79085 /* Build configuration list for PBXNativeTarget "CogniwideTaskTests" */;
+			buildPhases = (
+				BD66505E004B266029F42C67 /* [CP] Check Pods Manifest.lock */,
+				30B0A098256A5CFB00A79085 /* Sources */,
+				30B0A099256A5CFB00A79085 /* Frameworks */,
+				30B0A09A256A5CFB00A79085 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30B0A09E256A5CFB00A79085 /* PBXTargetDependency */,
+			);
+			name = CogniwideTaskTests;
+			productName = CogniwideTaskTests;
+			productReference = 30B0A09C256A5CFB00A79085 /* CogniwideTaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		30B0A0A6256A5CFB00A79085 /* CogniwideTaskUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30B0A0B6256A5CFB00A79085 /* Build configuration list for PBXNativeTarget "CogniwideTaskUITests" */;
+			buildPhases = (
+				FBB7B9D4755B530F0E6A8110 /* [CP] Check Pods Manifest.lock */,
+				30B0A0A3256A5CFB00A79085 /* Sources */,
+				30B0A0A4256A5CFB00A79085 /* Frameworks */,
+				30B0A0A5256A5CFB00A79085 /* Resources */,
+				5D56B2CF675C8FC49978E7A9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30B0A0A9256A5CFB00A79085 /* PBXTargetDependency */,
+			);
+			name = CogniwideTaskUITests;
+			productName = CogniwideTaskUITests;
+			productReference = 30B0A0A7256A5CFB00A79085 /* CogniwideTaskUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		30B0A07E256A5CF700A79085 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					30B0A085256A5CF700A79085 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					30B0A09B256A5CFB00A79085 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 30B0A085256A5CF700A79085;
+					};
+					30B0A0A6256A5CFB00A79085 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 30B0A085256A5CF700A79085;
+					};
+				};
+			};
+			buildConfigurationList = 30B0A081256A5CF700A79085 /* Build configuration list for PBXProject "CogniwideTask" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 30B0A07D256A5CF700A79085;
+			productRefGroup = 30B0A087256A5CF700A79085 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				30B0A085256A5CF700A79085 /* CogniwideTask */,
+				30B0A09B256A5CFB00A79085 /* CogniwideTaskTests */,
+				30B0A0A6256A5CFB00A79085 /* CogniwideTaskUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		30B0A084256A5CF700A79085 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30B0A096256A5CFA00A79085 /* LaunchScreen.storyboard in Resources */,
+				30B0A093256A5CFA00A79085 /* Assets.xcassets in Resources */,
+				30B0A091256A5CF700A79085 /* Main.storyboard in Resources */,
+				30B0A10B256A865200A79085 /* PostCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30B0A09A256A5CFB00A79085 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30B0A0A5256A5CFB00A79085 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26E928A5C1E56B711A6FC392 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CogniwideTask/Pods-CogniwideTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CogniwideTask/Pods-CogniwideTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CogniwideTask/Pods-CogniwideTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D56B2CF675C8FC49978E7A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CogniwideTask-CogniwideTaskUITests/Pods-CogniwideTask-CogniwideTaskUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CogniwideTask-CogniwideTaskUITests/Pods-CogniwideTask-CogniwideTaskUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CogniwideTask-CogniwideTaskUITests/Pods-CogniwideTask-CogniwideTaskUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B327E0F518921F5D0C122A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CogniwideTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD66505E004B266029F42C67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CogniwideTaskTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBB7B9D4755B530F0E6A8110 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CogniwideTask-CogniwideTaskUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		30B0A082256A5CF700A79085 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30B0A103256A82A000A79085 /* PostViewModel.swift in Sources */,
+				30B0A115256AEC3300A79085 /* MainTabViewController.swift in Sources */,
+				30B0A0EF256A6C7700A79085 /* Constants.swift in Sources */,
+				30B0A110256AEBB200A79085 /* LoginViewController.swift in Sources */,
+				30B0A0EA256A6C4C00A79085 /* APIRouter.swift in Sources */,
+				30B0A08A256A5CF700A79085 /* AppDelegate.swift in Sources */,
+				30B0A0F4256A6D4000A79085 /* ApiError.swift in Sources */,
+				30B0A10A256A865200A79085 /* PostCell.swift in Sources */,
+				30B0A0E0256A6B5600A79085 /* APIClient.swift in Sources */,
+				30B0A08C256A5CF700A79085 /* SceneDelegate.swift in Sources */,
+				30B0A11B256AFF6500A79085 /* CoreDataStack.swift in Sources */,
+				30B0A0C2256A5E0600A79085 /* FavouriteViewController.swift in Sources */,
+				30B0A0E5256A6B8800A79085 /* Post.swift in Sources */,
+				30B0A0BD256A5DCF00A79085 /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30B0A098256A5CFB00A79085 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30B0A0A1256A5CFB00A79085 /* CogniwideTaskTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30B0A0A3256A5CFB00A79085 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30B0A0AC256A5CFB00A79085 /* CogniwideTaskUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		30B0A09E256A5CFB00A79085 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30B0A085256A5CF700A79085 /* CogniwideTask */;
+			targetProxy = 30B0A09D256A5CFB00A79085 /* PBXContainerItemProxy */;
+		};
+		30B0A0A9256A5CFB00A79085 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30B0A085256A5CF700A79085 /* CogniwideTask */;
+			targetProxy = 30B0A0A8256A5CFB00A79085 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		30B0A08F256A5CF700A79085 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30B0A090256A5CF700A79085 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		30B0A094256A5CFA00A79085 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30B0A095256A5CFA00A79085 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		30B0A0AE256A5CFB00A79085 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		30B0A0AF256A5CFB00A79085 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		30B0A0B1256A5CFB00A79085 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DA080B8A6A872DF461D4C39 /* Pods-CogniwideTask.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CogniwideTask/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CogniwideTask;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		30B0A0B2256A5CFB00A79085 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93F88C7C4F8A86DE1B9E2D27 /* Pods-CogniwideTask.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CogniwideTask/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CogniwideTask;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		30B0A0B4256A5CFB00A79085 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3825064F4F2A5E3BA3879F94 /* Pods-CogniwideTaskTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CogniwideTaskTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CogniwideTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CogniwideTask.app/CogniwideTask";
+			};
+			name = Debug;
+		};
+		30B0A0B5256A5CFB00A79085 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03C4160B5065EFD99228A9DD /* Pods-CogniwideTaskTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CogniwideTaskTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CogniwideTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CogniwideTask.app/CogniwideTask";
+			};
+			name = Release;
+		};
+		30B0A0B7256A5CFB00A79085 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46551B4FFAD0687DAB80D715 /* Pods-CogniwideTask-CogniwideTaskUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CogniwideTaskUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CogniwideTaskUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CogniwideTask;
+			};
+			name = Debug;
+		};
+		30B0A0B8256A5CFB00A79085 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52A2607977AA968AB8D491F7 /* Pods-CogniwideTask-CogniwideTaskUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CogniwideTaskUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CogniwideTaskUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CogniwideTask;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		30B0A081256A5CF700A79085 /* Build configuration list for PBXProject "CogniwideTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30B0A0AE256A5CFB00A79085 /* Debug */,
+				30B0A0AF256A5CFB00A79085 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30B0A0B0256A5CFB00A79085 /* Build configuration list for PBXNativeTarget "CogniwideTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30B0A0B1256A5CFB00A79085 /* Debug */,
+				30B0A0B2256A5CFB00A79085 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30B0A0B3256A5CFB00A79085 /* Build configuration list for PBXNativeTarget "CogniwideTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30B0A0B4256A5CFB00A79085 /* Debug */,
+				30B0A0B5256A5CFB00A79085 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30B0A0B6256A5CFB00A79085 /* Build configuration list for PBXNativeTarget "CogniwideTaskUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30B0A0B7256A5CFB00A79085 /* Debug */,
+				30B0A0B8256A5CFB00A79085 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 30B0A07E256A5CF700A79085 /* Project object */;
+}
