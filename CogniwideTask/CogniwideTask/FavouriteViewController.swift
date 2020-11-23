@@ -6,26 +6,43 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-class FavouriteViewController: UIViewController {
 
+class FavouriteViewController: UIViewController, UIScrollViewDelegate {
+    var postArray = [Post]()
+    @IBOutlet weak var tableView: UITableView!
+
+    //Dispose bag
+    private let bag = DisposeBag()
+    private let viewModel = PostViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        self.title = "Favourite"
-        print("FavouriteViewController called=====")
-        // Do any additional setup after loading the view.
+        self.title = "Home"
+        tableView.register(UINib(nibName: "PostCell", bundle: nil), forCellReuseIdentifier: "PostCell")
+        tableView.rx.setDelegate(self).disposed(by: bag)
+        bindTableView()
     }
-    
 
-    /*
-    // MARK: - Navigation
+    private func bindTableView() {
+        viewModel.items.bind(to: tableView.rx.items(cellIdentifier: "PostCell", cellType: PostCell.self)) { (row, item, cell) in
+            cell.saveBtnTap
+                .subscribe(onNext: { print("cell details button tapped") })
+                .disposed(by: cell.bag)
+            cell.item = item
+        }.disposed(by: bag)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        tableView.rx.modelSelected(Post.self).subscribe(onNext: { item in
+            //  print("SelectedItem: title \(item.title)")
+        }).disposed(by: bag)
+        viewModel.fetchPostList()
     }
-    */
+}
+extension FavouriteViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
 
 }
