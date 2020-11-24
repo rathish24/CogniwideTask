@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30387C8F256BC72D00020FB3 /* CogniwideTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30387C8D256BC72D00020FB3 /* CogniwideTask.xcdatamodeld */; };
 		30B0A08A256A5CF700A79085 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A089256A5CF700A79085 /* AppDelegate.swift */; };
 		30B0A08C256A5CF700A79085 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A08B256A5CF700A79085 /* SceneDelegate.swift */; };
 		30B0A091256A5CF700A79085 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30B0A08F256A5CF700A79085 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		30B0A110256AEBB200A79085 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A10F256AEBB100A79085 /* LoginViewController.swift */; };
 		30B0A115256AEC3300A79085 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A114256AEC3300A79085 /* MainTabViewController.swift */; };
 		30B0A11B256AFF6500A79085 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A11A256AFF6400A79085 /* CoreDataStack.swift */; };
+		30B565C5256BFFF700A78152 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B565C4256BFFF700A78152 /* PostModel.swift */; };
 		519EE0463E159CB329046EAA /* Pods_CogniwideTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F15EF543465198C38AAC1FC1 /* Pods_CogniwideTaskTests.framework */; };
 		93E6B3FCC089F7276962C836 /* Pods_CogniwideTask_CogniwideTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC986D0C59D923C07873D9AF /* Pods_CogniwideTask_CogniwideTaskUITests.framework */; };
 		CA0DF622215B2B10C047F264 /* Pods_CogniwideTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF258AABEAC815FF894ACDD /* Pods_CogniwideTask.framework */; };
@@ -51,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		03C4160B5065EFD99228A9DD /* Pods-CogniwideTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CogniwideTaskTests.release.xcconfig"; path = "Target Support Files/Pods-CogniwideTaskTests/Pods-CogniwideTaskTests.release.xcconfig"; sourceTree = "<group>"; };
+		30387C8E256BC72D00020FB3 /* CogniwideTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CogniwideTask.xcdatamodel; sourceTree = "<group>"; };
 		30B0A086256A5CF700A79085 /* CogniwideTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CogniwideTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30B0A089256A5CF700A79085 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30B0A08B256A5CF700A79085 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +80,7 @@
 		30B0A10F256AEBB100A79085 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		30B0A114256AEC3300A79085 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		30B0A11A256AFF6400A79085 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		30B565C4256BFFF700A78152 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		3825064F4F2A5E3BA3879F94 /* Pods-CogniwideTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CogniwideTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-CogniwideTaskTests/Pods-CogniwideTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		46551B4FFAD0687DAB80D715 /* Pods-CogniwideTask-CogniwideTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CogniwideTask-CogniwideTaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-CogniwideTask-CogniwideTaskUITests/Pods-CogniwideTask-CogniwideTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		52A2607977AA968AB8D491F7 /* Pods-CogniwideTask-CogniwideTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CogniwideTask-CogniwideTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-CogniwideTask-CogniwideTaskUITests/Pods-CogniwideTask-CogniwideTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 		30B0A088256A5CF700A79085 /* CogniwideTask */ = {
 			isa = PBXGroup;
 			children = (
+				30B565C3256BFF6C00A78152 /* Extension */,
 				30B0A119256AFF4C00A79085 /* CoreData */,
 				30B0A107256A862B00A79085 /* Views */,
 				30B0A0D6256A60D300A79085 /* Models */,
@@ -164,6 +169,7 @@
 				30B0A0C1256A5E0600A79085 /* FavouriteViewController.swift */,
 				30B0A10F256AEBB100A79085 /* LoginViewController.swift */,
 				30B0A114256AEC3300A79085 /* MainTabViewController.swift */,
+				30387C8D256BC72D00020FB3 /* CogniwideTask.xcdatamodeld */,
 			);
 			path = CogniwideTask;
 			sourceTree = "<group>";
@@ -221,6 +227,14 @@
 				30B0A11A256AFF6400A79085 /* CoreDataStack.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		30B565C3256BFF6C00A78152 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				30B565C4256BFFF700A78152 /* PostModel.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		640BEC9FE9B5C20597162C36 /* Pods */ = {
@@ -476,12 +490,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				30B0A103256A82A000A79085 /* PostViewModel.swift in Sources */,
+				30B565C5256BFFF700A78152 /* PostModel.swift in Sources */,
 				30B0A115256AEC3300A79085 /* MainTabViewController.swift in Sources */,
 				30B0A0EF256A6C7700A79085 /* Constants.swift in Sources */,
 				30B0A110256AEBB200A79085 /* LoginViewController.swift in Sources */,
 				30B0A0EA256A6C4C00A79085 /* APIRouter.swift in Sources */,
 				30B0A08A256A5CF700A79085 /* AppDelegate.swift in Sources */,
 				30B0A0F4256A6D4000A79085 /* ApiError.swift in Sources */,
+				30387C8F256BC72D00020FB3 /* CogniwideTask.xcdatamodeld in Sources */,
 				30B0A10A256A865200A79085 /* PostCell.swift in Sources */,
 				30B0A0E0256A6B5600A79085 /* APIClient.swift in Sources */,
 				30B0A08C256A5CF700A79085 /* SceneDelegate.swift in Sources */,
@@ -594,7 +610,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -649,7 +665,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -821,6 +837,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		30387C8D256BC72D00020FB3 /* CogniwideTask.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				30387C8E256BC72D00020FB3 /* CogniwideTask.xcdatamodel */,
+			);
+			currentVersion = 30387C8E256BC72D00020FB3 /* CogniwideTask.xcdatamodel */;
+			path = CogniwideTask.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 30B0A07E256A5CF700A79085 /* Project object */;
 }

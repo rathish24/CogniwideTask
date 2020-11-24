@@ -34,13 +34,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let loggedUsername = UserDefaults.standard.string(forKey: "username") {
                 // instantiate the main tab bar controller and set it as root view controller
                 // using the storyboard identifier we set earlier
-                let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarController")
+            var mainTabBarController: UIViewController
+            if #available(iOS 13.0, *) {
+                 mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarController")
+            } else {
+                // Fallback on earlier versions
+                mainTabBarController = storyboard.instantiateViewController(withIdentifier:  "MainTabBarController")
+            }
                 window?.rootViewController = mainTabBarController
             } else {
                 // if user isn't logged in
                 // instantiate the navigation controller and set it as root view controller
                 // using the storyboard identifier we set earlier
-                let loginNavController = storyboard.instantiateViewController(identifier: "LoginNavigationController")
+                var loginNavController: UIViewController
+                if #available(iOS 13.0, *) {
+                    loginNavController = storyboard.instantiateViewController(identifier: "LoginNavigationController")
+                } else {
+                    // Fallback on earlier versions
+                    loginNavController = storyboard.instantiateViewController(withIdentifier:  "LoginNavigationController")
+                }
+               
                 window?.rootViewController = loginNavController
             }
         return true
@@ -49,12 +62,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: UISceneSession Lifecycle
 
+    @available(iOS 13.0, *)
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
 
+    @available(iOS 13.0, *)
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
