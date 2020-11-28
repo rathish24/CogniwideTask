@@ -39,7 +39,15 @@ class PostCell: UITableViewCell {
      }
 
      private func setPostData() {
+        
         titleLabel.text = item.title
         descLabel.text = item.body
+       
+        print("items id == \(item.id)")
+        print("items isFave == \(item.isFavourite)")
+        print("items title == \(item.title)")
+        print("items body == \(item.body)")
+        print("items userID == \(item.userID)")
+        
      }
 }

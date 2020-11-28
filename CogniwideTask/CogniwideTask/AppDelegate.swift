@@ -9,29 +9,13 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
     var window: UIWindow?
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-      //  let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         window = UIWindow()
-        var isLoggedIn = false
-//        if isLoggedIn{
-//            let tabBarController = storyboard.instantiateViewController(withIdentifier: "MainTabViewController") as? MainTabViewController
-//            window?.makeKeyAndVisible()
-//            window?.backgroundColor = .white
-//            window?.rootViewController = tabBarController
-//        } else {
-//            let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
-//            window?.makeKeyAndVisible()
-//            window?.backgroundColor = .white
-//            window?.rootViewController = loginViewController
-//        }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-
-        if let loggedUsername = UserDefaults.standard.string(forKey: "username") {
+        let isLoggedIn = UserDefaults.standard.isLoggedIn()
+        print("isLoggedIn:::: \(isLoggedIn)")
+        if isLoggedIn {
                 // instantiate the main tab bar controller and set it as root view controller
                 // using the storyboard identifier we set earlier
             var mainTabBarController: UIViewController
@@ -53,7 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     // Fallback on earlier versions
                     loginNavController = storyboard.instantiateViewController(withIdentifier:  "LoginNavigationController")
                 }
-               
                 window?.rootViewController = loginNavController
             }
         return true
@@ -80,7 +63,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard let window = self.window else {
             return
         }
-        
         // change the root view controller to your specific view controller
         window.rootViewController = vc
         UIView.transition(with: window,

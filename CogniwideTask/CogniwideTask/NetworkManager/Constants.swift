@@ -10,6 +10,7 @@ struct Constants {
     struct ProductionServer {
         static let baseURL = "https://jsonplaceholder.typicode.com"
     }
+    
 }
 
 enum HTTPHeaderField: String {
@@ -21,4 +22,8 @@ enum HTTPHeaderField: String {
 
 enum ContentType: String {
     case json = "application/json"
+}
+
+enum UserDefaultsKeys: String {
+    case isLoggedIn
 }

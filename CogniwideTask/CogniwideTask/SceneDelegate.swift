@@ -20,9 +20,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         // add these lines
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            
             // if user is logged in before
-            if let loggedUsername = UserDefaults.standard.string(forKey: "username") {
+            let isLoggedIn = UserDefaults.standard.isLoggedIn()
+            print("isLoggedIn: scene::: \(isLoggedIn)")
+             if isLoggedIn {
                 // instantiate the main tab bar controller and set it as root view controller
                 // using the storyboard identifier we set earlier
                 let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarController")

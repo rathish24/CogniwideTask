@@ -62,6 +62,18 @@ class CoreDataStack: NSObject {
 
 
 extension CoreDataStack {
+    func deletePostData(entity: String, onSuccess success: @escaping (_ status: Bool) -> Void) {
+        let managedContext = CoreDataStack.sharedInstance.persistentContainer.viewContext
+        let fetchRequest = NSBatchDeleteRequest(fetchRequest: NSFetchRequest<NSFetchRequestResult>(entityName:entity))
+        do {
+            try managedContext.execute(fetchRequest)
+            CoreDataStack.sharedInstance.saveContext()
+            success(true)
+        } catch let error as NSError {
+            print("Detele all data in \(entity) error : \(error) \(error.userInfo)")
+            success(false)
+        }
+    }
     
     func applicationDocumentsDirectory() {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "yo.BlogReaderApp" in the application's documents directory.
