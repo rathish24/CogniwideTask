@@ -23,9 +23,8 @@ class LoginViewController: BaseViewController, LoginViewControllerDelegate {
     let viewModel = LoginViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("LoginViewController called")
         viewModel.delegate = self
-
+        registerKeyboardNotifications()
     }
 
     @IBAction func loginBtnAction(_ sender: UIButton) {
@@ -34,7 +33,14 @@ class LoginViewController: BaseViewController, LoginViewControllerDelegate {
         viewModel.sendValue(from: email, password: password)
     }
 
-
+    func registerKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
     func loginSucces(successMsg: String) {
     
         UserDefaults.standard.setLoggedIn(value: true)
@@ -53,7 +59,6 @@ class LoginViewController: BaseViewController, LoginViewControllerDelegate {
     }
 
     func loginError(errorMsg: String) {
-       
         showAlert(title: "", message: errorMsg, alertStyle: .alert, actionTitles: ["OK"], actionStyles: [.default],
                   actions: [
                       { _ in
@@ -62,5 +67,23 @@ class LoginViewController: BaseViewController, LoginViewControllerDelegate {
                       }
                   ])
     }
+    
+    
+}
+// MARK: Keyboard Handling
+extension LoginViewController {
+    @objc func keyboardWillShow(notification: NSNotification) {
+        guard let keyboardSize = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: (keyboardSize.cgRectValue.height + 10), right: 0)
+        self.scrollview.contentInset = contentInsets
+        self.scrollview.scrollIndicatorInsets = contentInsets
+    }
+    @objc func keyboardWillHide(notification: NSNotification) {
+        UIView.animate(withDuration: 0.3) {
+            self.scrollview.contentInset = UIEdgeInsets.zero
+            self.scrollview.scrollIndicatorInsets = UIEdgeInsets.zero
+        }
+    }
 
 }
+

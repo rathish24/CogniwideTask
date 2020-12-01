@@ -11,9 +11,7 @@ import RxCocoa
 
 
 class FavouriteViewController: BaseViewController, UIScrollViewDelegate {
-    var postArray = [Post]()
     @IBOutlet weak var tableView: UITableView!
-
     //Dispose bag
     private let bag = DisposeBag()
     private let viewModel = FavouriteViewModel()
@@ -28,14 +26,11 @@ class FavouriteViewController: BaseViewController, UIScrollViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.fetchPostList()
-        
-        
     }
 
     private func bindTableView() {
         viewModel.items.bind(to: tableView.rx.items(cellIdentifier: "PostCell", cellType: PostCell.self)) { (row, item, cell) in
             cell.saveBtn.isHidden = true
-            print(" item as? Post ::: \(item as? Post)")
             cell.item = item as? Post
         }.disposed(by: bag)       
     }

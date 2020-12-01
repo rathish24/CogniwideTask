@@ -34,6 +34,7 @@
 		30B0A110256AEBB200A79085 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A10F256AEBB100A79085 /* LoginViewController.swift */; };
 		30B0A115256AEC3300A79085 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A114256AEC3300A79085 /* MainTabViewController.swift */; };
 		30B0A11B256AFF6500A79085 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A11A256AFF6400A79085 /* CoreDataStack.swift */; };
+		30DDEC7725752134008EF0F7 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DDEC7625752134008EF0F7 /* UITableView.swift */; };
 		519EE0463E159CB329046EAA /* Pods_CogniwideTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F15EF543465198C38AAC1FC1 /* Pods_CogniwideTaskTests.framework */; };
 		93E6B3FCC089F7276962C836 /* Pods_CogniwideTask_CogniwideTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC986D0C59D923C07873D9AF /* Pods_CogniwideTask_CogniwideTaskUITests.framework */; };
 		CA0DF622215B2B10C047F264 /* Pods_CogniwideTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF258AABEAC815FF894ACDD /* Pods_CogniwideTask.framework */; };
@@ -91,6 +92,7 @@
 		30B0A10F256AEBB100A79085 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		30B0A114256AEC3300A79085 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		30B0A11A256AFF6400A79085 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		30DDEC7625752134008EF0F7 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		3825064F4F2A5E3BA3879F94 /* Pods-CogniwideTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CogniwideTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-CogniwideTaskTests/Pods-CogniwideTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		46551B4FFAD0687DAB80D715 /* Pods-CogniwideTask-CogniwideTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CogniwideTask-CogniwideTaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-CogniwideTask-CogniwideTaskUITests/Pods-CogniwideTask-CogniwideTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		52A2607977AA968AB8D491F7 /* Pods-CogniwideTask-CogniwideTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CogniwideTask-CogniwideTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-CogniwideTask-CogniwideTaskUITests/Pods-CogniwideTask-CogniwideTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +141,53 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		303541D725762EAB00B1181F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				30B0A0C1256A5E0600A79085 /* FavouriteViewController.swift */,
+				30B0A10F256AEBB100A79085 /* LoginViewController.swift */,
+				30B0A114256AEC3300A79085 /* MainTabViewController.swift */,
+				301612102572DBE30047F6AD /* BaseViewController.swift */,
+				30B0A0BC256A5DCF00A79085 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		303541D825762ED100B1181F /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				30B0A089256A5CF700A79085 /* AppDelegate.swift */,
+				30B0A08B256A5CF700A79085 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		303541D925762EE800B1181F /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				30B0A08F256A5CF700A79085 /* Main.storyboard */,
+				30B0A094256A5CFA00A79085 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		303541DA25762F0100B1181F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				30B0A108256A865200A79085 /* PostCell.swift */,
+				30B0A109256A865200A79085 /* PostCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		303541DB25762F6200B1181F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				30B0A0EE256A6C7700A79085 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		3089D0542570D1A5008C75C5 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,24 +221,18 @@
 		30B0A088256A5CF700A79085 /* CogniwideTask */ = {
 			isa = PBXGroup;
 			children = (
+				303541DB25762F6200B1181F /* Constants */,
+				303541D825762ED100B1181F /* Delegate */,
+				303541D725762EAB00B1181F /* Controller */,
 				3089D0542570D1A5008C75C5 /* Utility */,
 				30B565C3256BFF6C00A78152 /* Extension */,
 				30B0A119256AFF4C00A79085 /* CoreData */,
 				30B0A107256A862B00A79085 /* Views */,
 				30B0A0D6256A60D300A79085 /* Models */,
 				30B0A0C6256A5F7D00A79085 /* NetworkManager */,
-				30B0A089256A5CF700A79085 /* AppDelegate.swift */,
-				30B0A08B256A5CF700A79085 /* SceneDelegate.swift */,
-				30B0A08F256A5CF700A79085 /* Main.storyboard */,
 				30B0A092256A5CFA00A79085 /* Assets.xcassets */,
-				30B0A094256A5CFA00A79085 /* LaunchScreen.storyboard */,
 				30B0A097256A5CFA00A79085 /* Info.plist */,
-				30B0A0BC256A5DCF00A79085 /* HomeViewController.swift */,
-				30B0A0C1256A5E0600A79085 /* FavouriteViewController.swift */,
-				30B0A10F256AEBB100A79085 /* LoginViewController.swift */,
-				30B0A114256AEC3300A79085 /* MainTabViewController.swift */,
 				30387C8D256BC72D00020FB3 /* CogniwideTask.xcdatamodeld */,
-				301612102572DBE30047F6AD /* BaseViewController.swift */,
 			);
 			path = CogniwideTask;
 			sourceTree = "<group>";
@@ -217,7 +260,6 @@
 			children = (
 				30B0A0DF256A6B5600A79085 /* APIClient.swift */,
 				30B0A0E9256A6C4C00A79085 /* APIRouter.swift */,
-				30B0A0EE256A6C7700A79085 /* Constants.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -235,8 +277,8 @@
 		30B0A107256A862B00A79085 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				30B0A108256A865200A79085 /* PostCell.swift */,
-				30B0A109256A865200A79085 /* PostCell.xib */,
+				303541DA25762F0100B1181F /* Cells */,
+				303541D925762EE800B1181F /* StoryBoard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -256,6 +298,7 @@
 			children = (
 				301611A72572A8DC0047F6AD /* CodingUserInfoKey.swift */,
 				3016120E2572D5660047F6AD /* UserDefaults.swift */,
+				30DDEC7625752134008EF0F7 /* UITableView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -519,6 +562,7 @@
 				30B0A0EA256A6C4C00A79085 /* APIRouter.swift in Sources */,
 				30B0A08A256A5CF700A79085 /* AppDelegate.swift in Sources */,
 				301612092572B4AC0047F6AD /* Post+CoreDataProperties.swift in Sources */,
+				30DDEC7725752134008EF0F7 /* UITableView.swift in Sources */,
 				301611A82572A8DC0047F6AD /* CodingUserInfoKey.swift in Sources */,
 				3089D05E2570D4E0008C75C5 /* LoginViewModel.swift in Sources */,
 				30387C8F256BC72D00020FB3 /* CogniwideTask.xcdatamodeld in Sources */,

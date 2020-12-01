@@ -10,7 +10,6 @@ struct Constants {
     struct ProductionServer {
         static let baseURL = "https://jsonplaceholder.typicode.com"
     }
-    
 }
 
 enum HTTPHeaderField: String {

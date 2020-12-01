@@ -28,7 +28,6 @@ class HomeViewController: BaseViewController, UIScrollViewDelegate {
         logoutBtn.addTarget(self, action: #selector(HomeViewController.didLogout(_:)), for: .touchUpInside)
         logoutBtn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         let logoutNavItem = UIBarButtonItem(customView: logoutBtn)
-        print("logoutNavItem::::: \(logoutNavItem)")
         navigationItem.rightBarButtonItem = logoutNavItem
         tableView.rx.setDelegate(self).disposed(by: bag)
         bindTableView()
@@ -85,10 +84,6 @@ class HomeViewController: BaseViewController, UIScrollViewDelegate {
                 .disposed(by: cell.bag)
             cell.item = item as? Post
         }.disposed(by: bag)
-
-        tableView.rx.modelSelected(Post.self).subscribe(onNext: { item in
-            //  print("SelectedItem: title \(item.title)")
-        }).disposed(by: bag)
         viewModel.fetchPostList()
     }
 }
