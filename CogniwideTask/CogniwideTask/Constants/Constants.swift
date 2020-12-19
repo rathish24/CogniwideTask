@@ -10,6 +10,11 @@ struct Constants {
     struct ProductionServer {
         static let baseURL = "https://jsonplaceholder.typicode.com"
     }
+    struct ErrorMsg {
+        static let emailInvalid = "Email is invalid"
+        static let passwordInvalid = "Password must between 8 to 15 characters"
+    }
+    
 }
 
 enum HTTPHeaderField: String {
@@ -26,3 +31,5 @@ enum ContentType: String {
 enum UserDefaultsKeys: String {
     case isLoggedIn
 }
+
+

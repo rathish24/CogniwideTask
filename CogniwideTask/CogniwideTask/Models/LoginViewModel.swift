@@ -7,35 +7,54 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
-protocol LoginViewModelDelegate {
-    func sendValue(from email:String, password:String)
+
+protocol LoginViewModelInputs {
+    var email: BehaviorRelay<String?> { get }
+    var password: BehaviorRelay<String?> { get }
+    func didTapLogin()
 }
-class LoginViewModel: LoginViewModelDelegate {
 
-    var delegate:LoginViewControllerDelegate?
+protocol LoginViewModelOutputs {
+    var emailChecking: Driver<Bool> { get }
+    var passwordChecking: Driver<Bool> { get }
+    var login: Driver<Void> { get }
+}
+
+class LoginViewModel: ViewModelBinding, LoginViewModelInputs, LoginViewModelOutputs {
     
-    func sendValue(from email: String, password: String) {
+    var inputs: LoginViewModelInputs { return self }
+    var outputs: LoginViewModelOutputs { return self }
 
-        
-        let emailValidation = validatePattern(text: email)
-        let passwordValidation = validateLength(text: password , size: (8,15))
-        if !emailValidation {
-            delegate?.loginError(errorMsg: "Email is invalid")
-        } else if !passwordValidation{
-            delegate?.loginError(errorMsg: "Password must between 8 to 15 characters")
-        } else if  passwordValidation && emailValidation {
-            delegate?.loginSucces(successMsg: "Login Succesfull")
+    var email: BehaviorRelay<String?>
+    var password: BehaviorRelay<String?>
+
+    var emailChecking: Driver<Bool>
+    var passwordChecking: Driver<Bool>
+    var login: Driver<Void>
+
+    private let loginSubject: PublishSubject<Void> = PublishSubject()
+    private let emailCheckingSubject: PublishSubject<Bool> = PublishSubject()
+    private let passwordCheckingSubject: PublishSubject<Bool> = PublishSubject()
+
+    init() {
+        email = BehaviorRelay(value: nil)
+        password = BehaviorRelay(value: nil)
+        login = loginSubject.asDriver(onErrorJustReturn: ())
+        emailChecking = emailCheckingSubject.asDriver(onErrorJustReturn: false)
+        passwordChecking = passwordCheckingSubject.asDriver(onErrorJustReturn: false)
+    }
+
+    func didTapLogin() {
+        let emailIsValid = Utility.validatePattern(text: email.value ?? "")
+        let passwordIsValid = Utility.validateLength(text: password.value ?? "", size: (8, 15))
+        emailCheckingSubject.onNext(emailIsValid)
+        passwordCheckingSubject.onNext(passwordIsValid)
+        if emailIsValid && passwordIsValid {
+            loginSubject.onNext(())
         }
-       
-    }
-    
-    func validateLength(text : String, size : (min : Int, max : Int)) -> Bool{
-        return (size.min...size.max).contains(text.count)
-    }
-    func validatePattern(text : String) -> Bool{
-        let emailRegEx = "[A-Z0-9a-z._]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluate(with: text)
     }
 }
+
+

@@ -6,33 +6,50 @@
 //
 
 import UIKit
-
+import RxSwift
+import RxCocoa
 
 protocol LoginViewControllerDelegate {
     func loginSucces(successMsg: String)
     func loginError(errorMsg: String)
 }
 
-class LoginViewController: BaseViewController, LoginViewControllerDelegate {
-   
+class LoginViewController: BaseViewController {
+
 
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var scrollview: UIScrollView!
     let viewModel = LoginViewModel()
+    let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.delegate = self
         registerKeyboardNotifications()
+        bindViewModel()
     }
 
-    @IBAction func loginBtnAction(_ sender: UIButton) {
-        guard let email = emailTF.text else { return }
-        guard let password = passwordTF.text else { return }
-        viewModel.sendValue(from: email, password: password)
-    }
+    func bindViewModel() {
+        emailTF.rx.text.bind(to: viewModel.inputs.email).disposed(by: disposeBag)
+        passwordTF.rx.text.bind(to: viewModel.inputs.password).disposed(by: disposeBag)
+        loginBtn.rx.tap.bind(onNext: viewModel.inputs.didTapLogin).disposed(by: disposeBag)
 
+        viewModel.outputs.emailChecking.asDriver(onErrorJustReturn: false).drive(onNext: { (isValid) in
+            if !isValid {
+                self.loginError(errorMsg: Constants.ErrorMsg.emailInvalid)
+            }
+        }).disposed(by: disposeBag)
+
+        viewModel.outputs.passwordChecking.asDriver(onErrorJustReturn: false).drive(onNext: { (isValid) in
+            if !isValid {
+                self.loginError(errorMsg: Constants.ErrorMsg.passwordInvalid)
+            }
+        }).disposed(by: disposeBag)
+
+        viewModel.outputs.login.drive(onNext: {
+            self.loginSucces()
+        }).disposed(by: disposeBag)
+    }
     func registerKeyboardNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -41,8 +58,10 @@ class LoginViewController: BaseViewController, LoginViewControllerDelegate {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    func loginSucces(successMsg: String) {
-    
+
+
+    func loginSucces() {
+
         UserDefaults.standard.setLoggedIn(value: true)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var mainTabBarController: UIViewController
@@ -62,13 +81,13 @@ class LoginViewController: BaseViewController, LoginViewControllerDelegate {
         showAlert(title: "", message: errorMsg, alertStyle: .alert, actionTitles: ["OK"], actionStyles: [.default],
                   actions: [
                       { _ in
-                        
-                       
+
+
                       }
                   ])
     }
-    
-    
+
+
 }
 // MARK: Keyboard Handling
 extension LoginViewController {

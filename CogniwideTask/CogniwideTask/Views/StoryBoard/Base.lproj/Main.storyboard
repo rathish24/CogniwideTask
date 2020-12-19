@@ -188,9 +188,6 @@
                                                         <real key="value" value="6"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="loginBtnAction:" destination="Pah-Sh-KS3" eventType="touchUpInside" id="PuZ-I9-7gz"/>
-                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email id" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cVP-AE-jta">
                                                 <rect key="frame" x="32" y="210" width="350" height="36"/>
